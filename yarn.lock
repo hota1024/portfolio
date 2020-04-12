@@ -4929,10 +4929,10 @@ timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
-tiny-canvas@^0.0.15:
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/tiny-canvas/-/tiny-canvas-0.0.15.tgz#d5b52c0546dcb15f3f8983d5832e8a0e0bf84ce2"
-  integrity sha512-g7fTYkG1nMVMOXCFJztxhj6fM7C/T8yat8ELlqq9zg61c+XaHGBTJps8wHSvIv+YZUHKrsBonFcVW/tK3XfLCA==
+tiny-canvas@^0.0.16:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/tiny-canvas/-/tiny-canvas-0.0.16.tgz#ae003fd90ca9f3172332a6cdc9bae090bef88736"
+  integrity sha512-9JgTA2kjMpWoGWyEnZRHuYuj6zi4O6GpCyEMgGh25zbQsTvoqjTGIcjj+L2EvYrGUt8n940cQn27hvSf2nQ6Lw==
 
 tmp@^0.0.33:
   version "0.0.33"
