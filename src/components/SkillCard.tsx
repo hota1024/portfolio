@@ -27,6 +27,7 @@ export const SkillCard: FC<{
           justify-content: center;
           overflow: auto;
           min-width: 0;
+          box-shadow: 0 2px 2px #a0a0a0;
         }
 
         h5 {
