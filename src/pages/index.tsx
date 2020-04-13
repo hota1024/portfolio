@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { HomeBackground } from '../components/HomeBackground'
 import { SkillCard } from '../components/SkillCard'
+import { MySkills } from '../components/MySkills'
 
 const Home = () => {
   return (
@@ -40,7 +41,7 @@ const Home = () => {
           </div>
           <div className="container text-center section">
             <h2>Skills</h2>
-            <SkillCard />
+            <MySkills />
           </div>
         </div>
       </main>
