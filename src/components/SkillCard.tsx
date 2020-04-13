@@ -1,22 +1,32 @@
-export const SkillCard = () => {
+import { FC } from 'react'
+
+export const SkillCard: FC<{
+  name: string
+  color: string
+  background: string
+  logoSrc: string
+}> = (props) => {
   return (
     <>
-      <div className="skill-card-wrap">
+      <div
+        className="skill-card-wrap"
+        style={{ color: props.color, background: props.background }}
+      >
         <div>
-          <img src="/react.svg" width="32"></img>
-          <h5>React</h5>
+          <img src={props.logoSrc} width="32"></img>
+          <h5>{props.name}</h5>
         </div>
       </div>
       <style jsx>{`
         .skill-card-wrap {
-          color: #61dafb;
-          background: #20232a;
           border-radius: 3px;
-          min-width: 74px;
-          min-height: 74px;
+          width: 96px;
+          height: 96px;
           display: grid;
           align-content: center;
           justify-content: center;
+          overflow: auto;
+          min-width: 0;
         }
 
         h5 {
