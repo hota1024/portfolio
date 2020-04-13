@@ -155,13 +155,19 @@ class Background extends TinyGame {
   }
 
   generateRandomShape() {
+    const colors: [number, number, number][] = [
+      [187, 222, 251],
+      [200, 230, 201],
+      [255, 224, 178],
+      [209, 196, 233],
+    ]
     const data: ShapeParams = [
       Math.random() * this.width,
       Math.random() * this.height,
       Math.random() * 64 + 16,
       Math.random() * Math.PI * 2 - Math.PI,
       0.5 + Math.random() * 2,
-      Math.random() < 0.5 ? [187, 222, 251] : [200, 230, 201],
+      colors[Math.floor(Math.random() * colors.length)],
     ]
     const shapeType = Math.floor(Math.random() * 4)
 
