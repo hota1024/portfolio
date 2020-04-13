@@ -166,7 +166,7 @@ class Background extends TinyGame {
       Math.random() * this.height,
       Math.random() * 64 + 16,
       Math.random() * Math.PI * 2 - Math.PI,
-      0.5 + Math.random() * 2,
+      0.5 + Math.random() * 3,
       colors[Math.floor(Math.random() * colors.length)],
     ]
     const shapeType = Math.floor(Math.random() * 4)
