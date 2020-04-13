@@ -4,6 +4,7 @@ import {
   CanvasRenderer,
   CanvasInputManager,
   AnimationFrameRequestTicker,
+  LineCap,
 } from 'tiny-canvas'
 
 const RGBToRGBA = (color: [number, number, number], alpha: number) =>
@@ -85,17 +86,47 @@ class CircleShape extends Shape {
 
 class TriangleShape extends Shape {
   draw(game: Background) {
-    // game.strokeCircle(this.x, this.y, this.size, RGBToRGBA(this.color, 1), 4)
     game.strokePolygon(
       this.x,
       this.y,
       this.size,
       3,
       this.angle,
-      // Math.PI,
       RGBToRGBA(this.color, this.fade),
       4
     )
+  }
+}
+
+class SquareShape extends Shape {
+  draw(game: Background) {
+    game.strokePolygon(
+      this.x,
+      this.y,
+      this.size,
+      4,
+      this.angle,
+      RGBToRGBA(this.color, this.fade),
+      4
+    )
+  }
+}
+
+class CrossShape extends Shape {
+  draw(game: Background) {
+    let angle = this.angle
+    for (let i = 0; i < 4; ++i) {
+      game.line(
+        this.x,
+        this.y,
+        this.x + Math.cos(angle) * this.size,
+        this.y + Math.sin(angle) * this.size,
+        RGBToRGBA(this.color, this.fade),
+        4,
+        LineCap.Round
+      )
+      angle += Math.PI / 2
+    }
   }
 }
 
@@ -106,7 +137,7 @@ class Background extends TinyGame {
 
   shapes: Shape[] = []
 
-  maxShapes = 16
+  maxShapes = 5
 
   constructor(canvas: HTMLCanvasElement) {
     super(
@@ -132,12 +163,16 @@ class Background extends TinyGame {
       0.5 + Math.random() * 2,
       Math.random() < 0.5 ? [187, 222, 251] : [200, 230, 201],
     ]
-    const shapeType = Math.floor(Math.random() * 2)
+    const shapeType = Math.floor(Math.random() * 4)
 
     if (shapeType === 0) {
       this.shapes.push(new CircleShape(...data))
     } else if (shapeType === 1) {
       this.shapes.push(new TriangleShape(...data))
+    } else if (shapeType === 2) {
+      this.shapes.push(new SquareShape(...data))
+    } else if (shapeType === 3) {
+      this.shapes.push(new CrossShape(...data))
     }
   }
 
@@ -147,16 +182,16 @@ class Background extends TinyGame {
   }
 
   update() {
-    if (this.mouse.leftDown) {
-      this.ripples.push({
-        ...this.cursor,
-        size: 0,
-        maxSize: 128,
-        // color: [187, 222, 251],
-        color: [255, 255, 255],
-      })
-    }
-    this.updateRipples()
+    // if (this.mouse.leftDown) {
+    //   this.ripples.push({
+    //     ...this.cursor,
+    //     size: 0,
+    //     maxSize: 128,
+    //     // color: [187, 222, 251],
+    //     color: [255, 255, 255],
+    //   })
+    // }
+    // this.updateRipples()
     this.updateShapes()
   }
 
