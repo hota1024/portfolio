@@ -23,8 +23,6 @@ const Home = () => {
           <div className="container text-center section">
             <h1 id="my-name">hota1024</h1>
             <div id="my-description">Game and WebApp Creator</div>
-            {/* <div id="my-description">ようちえんじぷよぐやまー</div> */}
-            {/* {window.pageYOffset} */}
           </div>
           <div className="container text-center section">
             <h2>About me</h2>
