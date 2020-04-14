@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import { HomeBackground } from '../components/HomeBackground'
-import { SkillCard } from '../components/SkillCard'
 import { MySkills } from '../components/MySkills'
+import { MyDetail } from '../components/MyDetail'
+import { SnsButtons } from '../components/SnsButtons'
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
           <div className="container text-center section">
             <h1 id="my-name">hota1024</h1>
             <div id="my-description">Game and WebApp Creator</div>
+            <SnsButtons />
           </div>
           <div className="container text-center section">
             <h2>About me</h2>
@@ -31,14 +33,18 @@ const Home = () => {
             </div>
             <div className="self-introduction-content">
               <h2>hota1024/納本穂高</h2>
-              <p>ゲーム開発とWebアプリ開発が好きな高校生です。</p>
+              <p>ゲーム開発とアプリ開発が好きな高校生です。</p>
               <p>
                 静岡県に住んでいて、CoderDojo静岡という場所でユースメンターとして子どもたちにプログラミングを教えています。
               </p>
             </div>
+            <div>
+              <MyDetail />
+            </div>
           </div>
           <div className="container text-center section">
             <h2>Skills</h2>
+            <p>クリックすると詳細が見れます。</p>
             <MySkills />
           </div>
         </div>
