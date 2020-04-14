@@ -1,9 +1,11 @@
 import { FC } from 'react'
+import clsx from 'clsx'
 
 export const Button: FC<{
   background?: string
   color?: string
   href?: string
+  className?: string
   onClick?: () => void
 }> = (props) => {
   const onClick = () => {
@@ -13,11 +15,11 @@ export const Button: FC<{
   return (
     <>
       {props.href ? (
-        <a className="button" onClick={onClick}>
+        <a className={clsx('button', props.className)} onClick={onClick}>
           {props.children}
         </a>
       ) : (
-        <button className="button" onClick={onClick}>
+        <button className={clsx('button', props.className)} onClick={onClick}>
           {props.children}
         </button>
       )}
