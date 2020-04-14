@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { SnsButton } from './SnsButton'
 
 export const SnsButtons = () => {
