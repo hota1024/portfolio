@@ -1,23 +1,50 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
+import { Dialog } from './Dialog'
 
 export const SkillCard: FC<{
   name: string
   color: string
   background: string
   logoSrc: string
+  detail?: string
 }> = (props) => {
+  const [showDialog, setShowDialog] = useState<boolean>()
+
   return (
     <>
       <button
         className="skill-card-wrap"
         style={{ color: props.color, background: props.background }}
+        onClick={() => setShowDialog(true)}
       >
         <div>
           <img src={props.logoSrc} width="32"></img>
           <h5>{props.name}</h5>
         </div>
       </button>
+      <Dialog
+        show={showDialog}
+        onClose={() => setShowDialog(false)}
+        background={props.background}
+        color={props.color}
+      >
+        <div className="detail">
+          <img src={props.logoSrc} width="128px"></img>
+          <div>
+            <h5 style={{ fontSize: '1.5rem', textAlign: 'center' }}>
+              {props.name}
+            </h5>
+            <p style={{ padding: '1em' }}>{props.detail}</p>
+          </div>
+        </div>
+        <hr className="divider" color={props.color} />
+      </Dialog>
       <style jsx>{`
+        .detail {
+          text-align: center;
+          margin: 0;
+        }
+
         .skill-card-wrap {
           border: none;
           border-radius: 3px;
