@@ -17,7 +17,11 @@ export const Dialog: FC<{
       <div className={clsx('dialog-wrap', props.show && 'is-show')}>
         <div className="dialog">
           <div className="dialog-content">{props.children}</div>
-          <Button color="white" background="#2196F3" onClick={props.onClose}>
+          <Button
+            background={props.color}
+            color={props.background}
+            onClick={props.onClose}
+          >
             とじる
           </Button>
         </div>
