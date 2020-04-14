@@ -1,9 +1,11 @@
-import { FC } from 'react'
+import { FC, CSSProperties } from 'react'
 
 export const IconButton: FC<{
   size?: number
+  style?: CSSProperties
 }> = (props) => {
   const style = {
+    ...props.style,
     width: props.size,
     height: props.size,
   }
