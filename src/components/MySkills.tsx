@@ -6,6 +6,7 @@ type SkillData = {
   color: string
   background: string
   detail?: string
+  beginner?: boolean
 }
 
 export const MySkills = () => {
