@@ -3,6 +3,7 @@ import { HomeBackground } from '../components/HomeBackground'
 import { MySkills } from '../components/MySkills'
 import { MyDetail } from '../components/MyDetail'
 import { SnsButtons } from '../components/SnsButtons'
+import { MyWorks } from '../components/MyWorks'
 
 const Home = () => {
   return (
@@ -46,6 +47,10 @@ const Home = () => {
             <h2>Skills</h2>
             <p>クリックすると詳細が見れます。</p>
             <MySkills />
+          </div>
+          <div className="container text-center section">
+            <h2>Works</h2>
+            <MyWorks />
           </div>
         </div>
       </main>
