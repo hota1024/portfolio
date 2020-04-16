@@ -18,7 +18,7 @@
     "next": "9.3.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "tiny-canvas": "^0.0.16"
+    "tiny-canvas": "^0.0.17"
   },
   "devDependencies": {
     "@types/chroma-js": "^2.0.0",
