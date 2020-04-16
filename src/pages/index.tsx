@@ -4,6 +4,7 @@ import { MySkills } from '../components/MySkills'
 import { MyDetail } from '../components/MyDetail'
 import { SnsButtons } from '../components/SnsButtons'
 import { MyWorks } from '../components/MyWorks'
+import { MyHistory } from '../components/MyHistory'
 
 const Home = () => {
   return (
@@ -44,13 +45,21 @@ const Home = () => {
             </div>
           </div>
           <div className="container text-center section">
+            <h2>Works</h2>
+            <MyWorks />
+          </div>
+          <div className="container text-center section">
             <h2>Skills</h2>
             <p>クリックすると詳細が見れます。</p>
             <MySkills />
           </div>
           <div className="container text-center section">
-            <h2>Works</h2>
-            <MyWorks />
+            <h2>History</h2>
+            <MyHistory />
+          </div>
+          <div className="container text-center section">
+            <h2>Contact</h2>
+            <p>ご連絡はTwitterのDMでお願いします。</p>
           </div>
         </div>
       </main>
