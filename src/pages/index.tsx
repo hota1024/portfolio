@@ -5,6 +5,7 @@ import { MyDetail } from '../components/MyDetail'
 import { SnsButtons } from '../components/SnsButtons'
 import { MyWorks } from '../components/MyWorks'
 import { MyHistory } from '../components/MyHistory'
+import { Button } from '../components/Button'
 
 const Home = () => {
   return (
@@ -60,6 +61,13 @@ const Home = () => {
           <div className="container text-center section">
             <h2>Contact</h2>
             <p>ご連絡はTwitterのDMでお願いします。</p>
+            <Button
+              background="#68C0F6"
+              color="white"
+              href="https://twitter.com/hota1024"
+            >
+              Twitterへ
+            </Button>
           </div>
         </div>
       </main>
