@@ -15,7 +15,12 @@ export const Button: FC<{
   return (
     <>
       {props.href ? (
-        <a className={clsx('button', props.className)} onClick={onClick}>
+        <a
+          className={clsx('button', props.className)}
+          href={props.href}
+          target="__blank"
+          onClick={onClick}
+        >
           {props.children}
         </a>
       ) : (
@@ -30,6 +35,7 @@ export const Button: FC<{
           border-radius: 3px;
           background: ${props.background};
           color: ${props.color};
+          text-decoration: none;
           min-width: 200px;
           font-size: 1.05rem;
           padding: 0.5em;
