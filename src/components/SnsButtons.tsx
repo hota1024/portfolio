@@ -28,6 +28,18 @@ export const SnsButtons = () => {
           background="white"
           href="https://qiita.com/hota1024"
         />
+        <SnsButton
+          icon={['fas', 'cat']}
+          color="#F9A739"
+          background="white"
+          href="https://scratch.mit.edu/users/hota1024/"
+        />
+        <SnsButton
+          icon={['fab', 'speaker-deck']}
+          color="#009287"
+          background="white"
+          href="https://speakerdeck.com/hota1024"
+        />
       </div>
 
       <style jsx>{`
