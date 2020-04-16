@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import {
   TinyGame,
-  CanvasRenderer,
+  CanvasPreRenderer,
   CanvasInputManager,
   AnimationFrameRequestTicker,
   LineCap,
@@ -141,7 +141,8 @@ class Background extends TinyGame {
 
   constructor(canvas: HTMLCanvasElement) {
     super(
-      new CanvasRenderer(canvas),
+      // new CanvasRenderer(canvas),
+      new CanvasPreRenderer(canvas),
       new CanvasInputManager(document.body as HTMLCanvasElement),
       new AnimationFrameRequestTicker()
     )
@@ -279,6 +280,7 @@ export const HomeBackground = () => {
 
     const background = new Background(canvasRef.current)
     background.start()
+    window['background'] = background
   })
 
   return (
