@@ -66,6 +66,14 @@ export const MyWorks = () => {
       href: 'https://sites.google.com/castalia.co.jp/hackforspring',
       background: 'white',
     },
+    {
+      name: '静岡YLT',
+      description:
+        '静岡の学生クリエーターのコミュニティです。LTやもくもく回を中心に活動しています。',
+      image: '/shizuoka-ylt.png',
+      href: 'https://shizuoka-ylt.connpass.com/',
+      background: 'white',
+    },
   ]
 
   return (
