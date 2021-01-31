@@ -33,7 +33,7 @@ export const MySkills = () => {
       color: '#235a97',
       background: 'white',
       detail:
-        'Microsoftが開発しているAltJSです。JavaScriptい「型」という概念を付け加えた言語です。書きやすさと安全性から積極的に使用するようにしています。',
+        'Microsoftが開発しているAltJSです。JavaScriptに「型」という概念を付け加えた言語です。書きやすさと安全性から積極的に使用するようにしています。',
     },
     {
       name: 'Laravel',
