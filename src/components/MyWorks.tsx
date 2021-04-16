@@ -74,6 +74,13 @@ export const MyWorks = () => {
       href: 'https://shizuoka-ylt.connpass.com/',
       background: 'white',
     },
+    {
+      name: 'Kuro言語',
+      description: 'Web開発やアプリ開発向けの新しいプログラミング言語です。',
+      image: '/kuro-lang.png',
+      href: 'https://githubl.com/kuro-lang/',
+      background: '#212121',
+    },
   ]
 
   return (

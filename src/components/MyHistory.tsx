@@ -26,6 +26,16 @@ export const MyHistory = () => {
       date: '2020/3',
       content: 'HackForSpringに参加',
     },
+    {
+      date: '2020/10',
+      content:
+        '第2回 ジュニアプログラミングコンテスト in 静岡 高校生ソフトウェア部門優勝',
+    },
+    {
+      date: '2020',
+      content:
+        'セキュリティ・キャンプ2020 Y-III Cコンパイラを自作してみよう！ゼミ 参加',
+    },
   ]
 
   return (
