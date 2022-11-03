@@ -21,11 +21,7 @@ export const MyDetail = () => {
     },
     {
       name: '住んでるところ',
-      content: '静岡県',
-    },
-    {
-      name: '性格',
-      content: ['マイペース', 'ぴょんぴょん', '過集中'],
+      content: '静岡県 → 神奈川県',
     },
     {
       name: '好きなこと',
